@@ -1,4 +1,4 @@
-# Winto - Your Personal Task Manager
+# WINTO - What I Need To Do
 
 Welcome to Winto, a full-stack task management platform built with [TypeScript](https://www.typescriptlang.org/), [ReactJS](https://react.dev/) for the front end, [NestJS](https://docs.nestjs.com/) for the back end, and [MongoDB](https://www.mongodb.com/) as the database. The styles are written in [SCSS](https://sass-lang.com/documentation/syntax/), providing a seamless and efficient solution for organizing and accomplishing your daily tasks.
 
