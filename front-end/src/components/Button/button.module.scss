@@ -1,0 +1,72 @@
+@use "../../assets/styles/colors.scss" as *;
+
+.button {
+  height: 40px;
+  line-height: 40px;
+  border-width: 0px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 14px;
+  font-style: normal;
+  max-width: 100%;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+
+.variant {
+  &-default {
+    color: white;
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+
+  &-outline {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+  &-none {
+    color: black;
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+//Loading circle
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

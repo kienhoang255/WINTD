@@ -1,0 +1,41 @@
+@use "../../assets/styles/colors.scss" as *;
+@use "../../assets/styles/mixins.scss" as *;
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    align-items: start;
+  }
+}
+
+$maxWidthImg: 370px;
+$widthImg: 30vw;
+
+.bg-img1 {
+  position: absolute;
+  z-index: -1;
+  width: $widthImg;
+  max-width: $maxWidthImg;
+  left: 0;
+  bottom: 0;
+  @include tablet {
+    display: none;
+  }
+}
+
+.bg-img2 {
+  position: absolute;
+  z-index: -1;
+  width: $widthImg;
+  max-width: $maxWidthImg;
+  right: 0;
+  bottom: 0;
+  @include tablet {
+    display: none;
+  }
+}

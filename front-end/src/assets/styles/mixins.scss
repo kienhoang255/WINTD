@@ -1,0 +1,35 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 821px) {
+    @content;
+  }
+}
+
+@mixin window {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin windowRotate {
+  @media screen and (min-height: 1180px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin bigWindow {
+  @media screen and (min-width: 1201px) {
+    @content;
+  }
+}
+
+@mixin shortScreen1 {
+  @media screen and (max-height: 700px) {
+    @content;
+  }
+}

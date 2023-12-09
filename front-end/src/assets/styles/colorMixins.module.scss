@@ -1,0 +1,53 @@
+.bg__color {
+  &--transparent {
+    background-color: transparent;
+  }
+  &--white {
+    background-color: white;
+  }
+  &--black {
+    background-color: black;
+  }
+  &--blue {
+    background-color: blue;
+  }
+  &--red {
+    background-color: red;
+  }
+}
+
+.text__color {
+  &--transparent {
+    color: transparent;
+  }
+  &--white {
+    color: white;
+  }
+  &--black {
+    color: black;
+  }
+  &--blue {
+    color: blue;
+  }
+  &--red {
+    color: red;
+  }
+}
+
+.border__color {
+  &--transparent {
+    border-color: transparent;
+  }
+  &--white {
+    border-color: white;
+  }
+  &--black {
+    border-color: black;
+  }
+  &--blue {
+    border-color: blue;
+  }
+  &--red {
+    border-color: red;
+  }
+}

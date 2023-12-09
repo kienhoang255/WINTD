@@ -1,0 +1,89 @@
+@use "../../assets/styles/colors.scss" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  width: 100%;
+  align-items: center;
+  background-color: #fafbfc;
+  border-color: #dfe1e6;
+  color: #091e42;
+  cursor: text;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 100%;
+  font-size: 14px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  pointer-events: auto;
+
+  &:focus-within {
+    border-color: #2684ff;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 8px 6px;
+  margin: 0;
+  background-color: transparent;
+  border: 0px;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: inherit;
+  font-size: 14px;
+  min-width: 0px;
+  outline: none;
+  width: 100%;
+  line-height: 1.42857;
+}
+
+.validate-status {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 12px;
+
+  & p {
+    line-height: 12px;
+    margin-left: 4px;
+  }
+}
+
+.error {
+  border-color: $error;
+
+  & + .validate-status {
+    color: $error;
+  }
+}
+
+.warning {
+  border-color: $warning;
+
+  & + .validate-status {
+    color: $warning;
+  }
+}
+
+.success {
+  border-color: $success;
+
+  & + .validate-status {
+    color: $success;
+  }
+}
