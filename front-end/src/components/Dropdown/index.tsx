@@ -29,28 +29,35 @@ const Dropdown: React.FC<Props> = ({
   const idDropdown = cx(id);
   const idContent = cx(`${id}--content`);
 
-  //Get parent element
   useEffect(() => {
-    const element = document.getElementById(idDropdown);
-    if (element) {
+    //Get parent element
+    const eButton = document.getElementById(idDropdown);
+
+    if (eButton) {
       //Set position for the dropdown
       setPos({
-        top: element.offsetTop + Number(spacing),
-        left: element.offsetLeft,
+        top: eButton.offsetTop + Number(spacing),
+        left: eButton.offsetLeft,
       });
-      setWidth(element.offsetWidth);
-    }
-  }, []);
+      setWidth(eButton.offsetWidth);
 
-  //Incase the dropdown is going outside the screen
-  useEffect(() => {
-    const element = document.getElementById(idContent);
-    if (element && pos?.left && width) {
-      if (window.innerWidth < pos?.left + element?.offsetWidth)
+      window.addEventListener("resize", () => {
+        setPos({
+          top: eButton.offsetTop + Number(spacing),
+          left: eButton.offsetLeft,
+        });
+      });
+    }
+
+    //Incase the dropdown is going outside the screen
+    const eContent = document.getElementById(idContent);
+    if (eContent && pos?.left && width) {
+      console.log(window.innerWidth);
+      if (window.innerWidth < pos?.left + eContent?.offsetWidth)
         setPos({
           top: pos.top,
           //The formula to make the dropdown in the same X direction
-          left: pos.left - element.offsetWidth + width,
+          left: pos.left - eContent.offsetWidth + width,
         });
     }
   }, [onShow]);

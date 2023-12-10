@@ -14,8 +14,9 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 
-  padding: 0px 10px 0 12px;
+  padding: 0px 10px 0 10px;
   &:hover {
     opacity: 0.8;
   }
@@ -34,6 +35,17 @@
 }
 
 .rightIcon {
+  & > .button {
+    padding: 0px 10px 0 14px;
+  }
+
+  & > .button {
+    padding: 0px 10px 0 14px;
+  }
+
+  & + .button {
+    padding: 0px 10px 0 14px;
+  }
 }
 
 .variant {
@@ -53,6 +65,12 @@
     color: black;
     background-color: transparent;
     border: 1px solid transparent;
+  }
+
+  &-circle {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
   }
 }
 

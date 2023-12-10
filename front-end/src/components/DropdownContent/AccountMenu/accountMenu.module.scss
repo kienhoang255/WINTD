@@ -1,0 +1,33 @@
+@use "../../../assets/styles/colors.scss" as *;
+
+.content {
+  div {
+    border-bottom: 1px solid $borderDropdown;
+    padding: 8px 0px;
+  }
+
+  div:first-child {
+    padding: 0 0 8px 0;
+  }
+
+  div:last-child {
+    padding: 0px;
+    border-bottom: 0px solid;
+  }
+}
+
+.btn__menu {
+  width: 100%;
+  color: $textColorNav;
+  display: flex;
+  justify-content: start;
+  padding: 8px 20px;
+
+  &:hover {
+    background-color: #323940 !important;
+  }
+}
+
+.logout {
+  text-decoration: none;
+}

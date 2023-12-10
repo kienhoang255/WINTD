@@ -8,6 +8,7 @@ const cx = classNames.bind({ ...style, ...colorStyle });
 enum Variants {
   default = "default",
   outline = "outline",
+  circle = "circle",
   none = "none",
 }
 
@@ -50,7 +51,12 @@ const Button: React.FC<Props> = ({
   );
 
   return (
-    <button type={type} className={classes} onClick={onClick}>
+    <button
+      type={type}
+      className={classes}
+      onClick={onClick}
+      // style={{ width: 30, height: 30 }}
+    >
       {leftIcon && (
         <img className={cx("icon", "leftIcon")} src={leftIcon} alt="" />
       )}

@@ -19,6 +19,10 @@ const Routes = () => {
       component: React.lazy(() => import("../view/login")),
     },
     {
+      path: config.routes.logout,
+      component: React.lazy(() => import("../view/logout")),
+    },
+    {
       path: config.routes.signup,
       component: React.lazy(() => import("../view/signup")),
     },

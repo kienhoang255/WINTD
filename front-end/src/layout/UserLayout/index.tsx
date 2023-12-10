@@ -5,6 +5,7 @@ import style from "./userLayout.module.scss";
 import Dropdown from "../../components/Dropdown";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Button from "../../components/Button";
+import AccountMenu from "../../components/DropdownContent/AccountMenu";
 
 const cx = classNames.bind(style);
 
@@ -52,8 +53,10 @@ const UserLayout: React.FC<Props> = ({ children }) => {
         </div>
         <div className={cx("right")}>
           <p>Tìm kiếm</p>
-          <Dropdown id="5">
-            <Button className={cx("button__dropdown")}>KH</Button>
+          <Dropdown id="5" content={<AccountMenu />}>
+            <Button className={cx("button__dropdown")} variant="circle">
+              KH
+            </Button>
           </Dropdown>
         </div>
       </div>
