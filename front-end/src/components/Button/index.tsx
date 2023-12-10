@@ -19,6 +19,7 @@ interface Props {
   underline?: boolean;
   variant?: keyof typeof Variants;
   leftIcon?: string;
+  rightIcon?: React.ReactNode;
   type?: "button" | "submit" | "reset";
   loading?: boolean;
   className?: string;
@@ -32,6 +33,7 @@ const Button: React.FC<Props> = ({
   borderColor,
   underline = false,
   leftIcon,
+  rightIcon,
   type,
   loading = false,
   variant = Variants.default,
@@ -49,8 +51,17 @@ const Button: React.FC<Props> = ({
 
   return (
     <button type={type} className={classes} onClick={onClick}>
-      {leftIcon && <img className={cx("icon")} src={leftIcon} alt="" />}
+      {leftIcon && (
+        <img className={cx("icon", "leftIcon")} src={leftIcon} alt="" />
+      )}
       {loading ? <span className={cx("loader")}></span> : children}
+      {!rightIcon ? (
+        <></>
+      ) : typeof rightIcon === "string" ? (
+        <img className={cx("icon", "rightIcon")} src={leftIcon} alt="" />
+      ) : (
+        <span className={cx("icon", "rightIcon")}>{rightIcon}</span>
+      )}
     </button>
   );
 };

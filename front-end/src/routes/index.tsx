@@ -26,6 +26,10 @@ const Routes = () => {
       path: config.routes.signUpSentEmail,
       component: React.lazy(() => import("../view/signup/SendEmail")),
     },
+    {
+      path: config.routes.board,
+      component: React.lazy(() => import("../view/user")),
+    },
   ];
 
   const router = createBrowserRouter(

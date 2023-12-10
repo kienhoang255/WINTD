@@ -1,0 +1,39 @@
+@use "../../assets/styles/colors.scss" as *;
+@use "../../assets/styles/mixins.scss" as *;
+
+.container {
+  background-color: #1d2125;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-height: 48px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-bottom: 1px solid hsla(218, 54%, 19.6%, 0.16);
+}
+
+.left {
+  display: flex;
+  color: #9fabdc;
+}
+
+.right {
+  display: flex;
+  color: #9fabdc;
+}
+
+.button__dropdown {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: $textColorNav !important;
+  height: 32px;
+  font-weight: 500 !important;
+
+  &:hover {
+    background-color: #333c43 !important;
+  }
+}

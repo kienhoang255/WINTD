@@ -1,3 +1,5 @@
+@use "./colors.scss" as *;
+
 .bg__color {
   &--transparent {
     background-color: transparent;
@@ -13,6 +15,9 @@
   }
   &--red {
     background-color: red;
+  }
+  &--nav {
+    background-color: $textColorNav;
   }
 }
 
@@ -32,6 +37,9 @@
   &--red {
     color: red;
   }
+  &--nav {
+    color: $textColorNav;
+  }
 }
 
 .border__color {
@@ -49,5 +57,8 @@
   }
   &--red {
     border-color: red;
+  }
+  &--nav {
+    border-color: $textColorNav;
   }
 }
