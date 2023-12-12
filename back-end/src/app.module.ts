@@ -4,16 +4,18 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'db-winto.clyy5nx4v4ne.us-east-1.rds.amazonaws.com',
+      host: process.env.HOST,
       port: 3306,
-      username: 'admin',
-      password: '12345678',
-      database: 'mywinto',
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE,
       entities: [User],
       synchronize: true,
     }),

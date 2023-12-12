@@ -11,7 +11,7 @@ export class UserService {
   ) {}
 
   fetchUser() {
-    return;
+    return process.env.PORT;
   }
 
   createUser(data: CreateUserType) {

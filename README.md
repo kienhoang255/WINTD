@@ -1,6 +1,6 @@
-# WINTO - What I Need To Do
+# WINTD - What I Need To Do
 
-Welcome to Winto, a full-stack task management platform built with [TypeScript](https://www.typescriptlang.org/), [ReactJS](https://react.dev/) for the front end, [NestJS](https://docs.nestjs.com/) for the back end, and [MySQL](https://www.mysql.com/) AWS as the database. The styles are written in [SCSS](https://sass-lang.com/documentation/syntax/), providing a seamless and efficient solution for organizing and accomplishing your daily tasks.
+Welcome to WINTD, a full-stack task management platform built with [TypeScript](https://www.typescriptlang.org/), [ReactJS](https://react.dev/) for the front end, [NestJS](https://docs.nestjs.com/) for the back end, and [MySQL](https://www.mysql.com/) AWS as the database. The styles are written in [SCSS](https://sass-lang.com/documentation/syntax/), providing a seamless and efficient solution for organizing and accomplishing your daily tasks.
 
 <p align="center">
   <a href="https://www.typescriptlang.org/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="200" alt="Typescript Logo" /></a>
