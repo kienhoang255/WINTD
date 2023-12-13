@@ -15,7 +15,7 @@ export class User {
   @Column()
   username: string;
 
-  @Column({ unique: true })
+  @Column()
   phone_number: string;
 
   @Column({ unique: true })

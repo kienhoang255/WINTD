@@ -17,26 +17,26 @@ import { CreateUserDto } from './dto/CreateUser.dto';
 export class UserController {
   constructor(private userService: UserService) {}
 
-  @Get('')
-  getUsers() {
-    return this.userService.fetchUser();
+  @Get()
+  async getUsers() {
+    return await this.userService.findUser();
   }
 
   @Post()
   @UsePipes(new ValidationPipe())
-  createUser(@Body() userData: CreateUserDto) {
-    return this.userService.createUser(userData);
+  async createUser(@Body() userData: CreateUserDto) {
+    return await this.userService.createUser(userData);
   }
 
   @Post('check-email')
-  checkEmailUser(@Query('email') email: string) {
-    return this.userService.checkEmailUser(email);
+  async checkEmailUser(@Query('email') email: string) {
+    return await this.userService.checkEmailUser(email);
   }
 
   @Get(':id/:postId')
-  getUserById(@Param('id') id: string, @Param('postId') postId: string) {
+  async getUserById(@Param('id') id: string, @Param('postId') postId: string) {
     if (!postId)
       throw new HttpException('postId not found', HttpStatus.BAD_REQUEST);
-    return { id, postId };
+    return await { id, postId };
   }
 }
